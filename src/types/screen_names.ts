@@ -1,0 +1,11 @@
+export type screenName =
+  | 'Userselection'
+  | 'Login'
+  | 'Signup'
+  | 'Patientonbordingfirst'
+  | 'Patientonbordingsecond'
+  | 'Patientonbordingthird'
+  | 'Doctoronbordingfirst'
+  | 'Doctoronbordingsecond'
+  | 'Doctoronbordingthird'
+  | 'Userdashboard';
