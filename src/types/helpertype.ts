@@ -6,3 +6,8 @@ export type Appointment = {
   speciality: string;
   time: string;
 };
+export type UserBottomNavigationType = {
+  name: string;
+  icon: React.ReactNode;
+  iconfill: React.ReactNode;
+};

@@ -13,6 +13,7 @@ import doctoronbordingfirst from '../screens/doctoronbordingfirst';
 import doctoronbordingsecond from '../screens/doctoronbordingsecond';
 import doctoronbordingthird from '../screens/doctoronbordingthird';
 import userdashboard from '../screens/userdashboard';
+import patientbottomnavigation from './patientbottomnavigation';
 
 const StackComponent = createStackNavigator<RootStackParamList>();
 export default function () {
@@ -20,7 +21,7 @@ export default function () {
     <>
       <NavigationContainer ref={navigationRef}>
         <StackComponent.Navigator
-          initialRouteName={'Userdashboard'}
+          initialRouteName={'Userselection'}
           screenOptions={{
             headerShown: false,
           }}>
@@ -57,6 +58,10 @@ export default function () {
               <StackComponent.Screen
             name={'Userdashboard'}
             component={userdashboard}
+          />
+              <StackComponent.Screen
+            name={'Patientbottomnavigation'}
+            component={patientbottomnavigation}
           />
         </StackComponent.Navigator>
       </NavigationContainer>

@@ -11,6 +11,7 @@ import Reports from '../../components/reports';
 import UpcomingAppointment from '../../components/upcomingAppointment';
 import {useSelector} from 'react-redux';
 import {RootState} from '../../redux/root reducer';
+import Prescription from '../../components/prescription';
 export default function () {
   const {userAppointmentlist} = useSelector((state: RootState) => state.User);
   return (
@@ -39,6 +40,12 @@ export default function () {
                 />
               ))}
             </FlexBox>
+            <Title text="Recent Prescriptions" textStyle={styles.titleText} />
+            <Prescription
+              checkupType="General Checkup"
+              name="Dr.Michael Brown"
+              time="23 March 2024"
+            />
           </FlexBox>
         </Box>
       </ScrollView>

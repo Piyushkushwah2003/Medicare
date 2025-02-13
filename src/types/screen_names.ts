@@ -8,4 +8,9 @@ export type screenName =
   | 'Doctoronbordingfirst'
   | 'Doctoronbordingsecond'
   | 'Doctoronbordingthird'
-  | 'Userdashboard';
+  | 'Userdashboard'
+  | 'Home'
+  | 'Doctors'
+  | 'Appointments'
+  | 'Profile'
+  | 'Patientbottomnavigation';
