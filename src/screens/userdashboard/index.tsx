@@ -20,7 +20,7 @@ export default function () {
         <Usertab />
         <Box>
           <FlexBox flexDirection="column" rowgap={20}>
-            <Searchbar />
+            <Searchbar placeholderText="Search doctors , specialities...." />
             <Title text="Quick Actions" textStyle={styles.titleText} />
             <FlexBox
               alignItems="center"

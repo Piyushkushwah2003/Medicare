@@ -3,15 +3,21 @@ import FlexBox from '../flexBox';
 import Title from '../title';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import {COLORS, IMAGES, SIZE} from '../../config/constants';
-import {Image, StyleSheet, TouchableOpacity} from 'react-native';
+import {Image, StyleSheet, TextStyle, TouchableOpacity} from 'react-native';
 import {TextInput} from 'react-native-gesture-handler';
-export default function () {
+export default function (
+  {
+    placeholderText
+  }:{
+    placeholderText?:string;
+  }
+) {
   return (
     <>
       <FlexBox style={styles.container} alignItems="center">
         <TextInput
           numberOfLines={1}
-          placeholder="Search doctors , specialities...."
+          placeholder={placeholderText}
           placeholderTextColor={COLORS.NEUTRAL_400}
           style={styles.textinput}></TextInput>
         <FlexBox style={styles.button}>
