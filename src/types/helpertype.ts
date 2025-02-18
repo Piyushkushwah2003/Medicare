@@ -11,3 +11,8 @@ export type UserBottomNavigationType = {
   icon: React.ReactNode;
   iconfill: React.ReactNode;
 };
+
+export type TabItems = {
+  title: string;
+  id: number;
+};
