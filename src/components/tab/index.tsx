@@ -53,9 +53,9 @@ const styles = StyleSheet.create({
   selectedbutton: {
     padding: 10,
     borderRadius: 25,
-    backgroundColor: COLORS.PRIMARY_500,
+    backgroundColor: '#3b82f6',
     borderWidth: 1,
-    borderColor: COLORS.PRIMARY_500,
+    borderColor: '#3b82f6',
   },
   selectedText: {
     fontSize: SIZE.EXTRASMALL,
