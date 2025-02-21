@@ -11,19 +11,20 @@ export default function () {
         alignItems="center"
         justifyContent="between"
         style={styles.container}>
-        <Title text="Medicare" textStyle={styles.text} />
-        <FlexBox alignItems="center" columngap={25}>
-          <TouchableOpacity>
-            <Ionicons
-              name="notifications-outline"
-              size={26}
-              color={COLORS.BLACK}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Image source={IMAGES.profile} style={styles.image} />
-          </TouchableOpacity>
-        </FlexBox>
+        <TouchableOpacity style={styles.profile}>
+          <Image source={IMAGES.profile} style={styles.image} />
+          <FlexBox flexDirection="column" rowgap={4}>
+            <Title text="Welcome" textStyle={styles.welcome} />
+            <Title text="Test User" textStyle={styles.name} />
+          </FlexBox>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.notification}>
+          <Ionicons
+            name="notifications-outline"
+            size={26}
+            color={COLORS.BLACK}
+          />
+        </TouchableOpacity>
       </FlexBox>
     </>
   );
@@ -43,6 +44,25 @@ const styles = StyleSheet.create({
     padding: 10,
     borderBottomWidth: 1,
     borderColor: COLORS.NEUTRAL_100,
-    backgroundColor:COLORS.NATURAL_WHITE,
+    backgroundColor: COLORS.NATURAL_WHITE,
+  },
+  name: {
+    fontSize: SIZE.EXTRASMALL,
+    fontWeight: '500',
+    color: COLORS.NEUTRAL_800,
+  },
+  profile: {
+    flexDirection: 'row',
+    columnGap: 5,
+    alignItems: 'center',
+  },
+  welcome: {
+    fontSize: SIZE.SMALLTEXT,
+    color: COLORS.PRIMARY_400,
+  },
+  notification: {
+    padding: 10,
+    backgroundColor: COLORS.PRIMARY_100,
+    borderRadius: 50,
   },
 });

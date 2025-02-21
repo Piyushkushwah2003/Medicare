@@ -4,6 +4,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import FontAwesome6 from 'react-native-vector-icons/FontAwesome6';
+import Fontisto from 'react-native-vector-icons/Fontisto';
 import {COLORS, SIZE} from '../config/constants';
 import {UserBottomNavigationType} from '../types/helpertype';
 import userdashboard from '../screens/userdashboard';
@@ -41,6 +42,13 @@ export default function () {
       name: 'Profile',
       icon: <Ionicons name="person" size={26} color="black" />,
       iconfill: <Ionicons name="person" size={26} color={COLORS.PRIMARY_900} />,
+    },
+    {
+      name: 'Medical',
+      icon: <Fontisto name="prescription" size={26} color="black" />,
+      iconfill: (
+        <Fontisto name="prescription" size={26} color={COLORS.PRIMARY_900} />
+      ),
     },
   ];
 
@@ -84,7 +92,8 @@ export default function () {
       <Tab.Screen name="Home" component={userdashboard} />
       <Tab.Screen name="Doctors" component={doctors} />
       <Tab.Screen name="Appointments" component={appointments} />
-      <Tab.Screen name="Profile" component={profile} />
+      <Tab.Screen name="Medical" component={profile} />
+      {/* <Tab.Screen name="Profile" component={profile} /> */}
     </Tab.Navigator>
   );
 }
