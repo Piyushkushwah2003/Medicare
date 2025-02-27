@@ -13,6 +13,7 @@ import FlexBox from '../components/flexBox';
 import doctors from '../screens/doctors';
 import appointments from '../screens/appointments';
 import React from 'react';
+import medicalRecords from '../screens/medicalRecords';
 const Tab = createBottomTabNavigator();
 
 export default function () {
@@ -44,7 +45,7 @@ export default function () {
       iconfill: <Ionicons name="person" size={26} color={COLORS.PRIMARY_900} />,
     },
     {
-      name: 'Medical',
+      name: 'Records',
       icon: <Fontisto name="prescription" size={26} color="black" />,
       iconfill: (
         <Fontisto name="prescription" size={26} color={COLORS.PRIMARY_900} />
@@ -92,7 +93,7 @@ export default function () {
       <Tab.Screen name="Home" component={userdashboard} />
       <Tab.Screen name="Doctors" component={doctors} />
       <Tab.Screen name="Appointments" component={appointments} />
-      <Tab.Screen name="Medical" component={profile} />
+      <Tab.Screen name="Records" component={medicalRecords} />
       {/* <Tab.Screen name="Profile" component={profile} /> */}
     </Tab.Navigator>
   );

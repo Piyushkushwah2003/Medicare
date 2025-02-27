@@ -1,17 +1,35 @@
 import React from 'react';
-import {StyleSheet, TouchableOpacity} from 'react-native';
+import {StyleSheet, TextStyle, TouchableOpacity, ViewStyle} from 'react-native';
 import FlexBox from '../flexBox';
 import Feather from 'react-native-vector-icons/Feather';
 import {COLORS, SIZE} from '../../config/constants';
 import Title from '../title';
-export default function () {
+export default function ({
+  innerContainerStyle,
+  text = 'Book Appointment',
+  iconVisible = true,
+  children,
+  textStyle,
+  children2,
+}: {
+  innerContainerStyle?: ViewStyle;
+  text?: string;
+  iconVisible?: boolean;
+  children?: React.ReactNode;
+  children2?: React.ReactNode;
+  textStyle?: TextStyle;
+}) {
   return (
     <>
       <TouchableOpacity style={styles.container}>
-        <FlexBox style={styles.cal}>
-          <Feather name="calendar" size={18} color={COLORS.PRIMARY_900} />
+        <FlexBox style={[styles.cal, innerContainerStyle]}>
+          {iconVisible && (
+            <Feather name="calendar" size={18} color={COLORS.PRIMARY_900} />
+          )}
+          {children}
         </FlexBox>
-        <Title text="Book Appointment" textStyle={styles.text} />
+        <Title text={text} textStyle={[styles.text, textStyle]} />
+        {children2}
       </TouchableOpacity>
     </>
   );

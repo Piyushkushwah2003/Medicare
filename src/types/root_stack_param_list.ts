@@ -14,7 +14,7 @@ type RootStackParamList = {
   Appointments:undefined;
   Profile:undefined;
   Patientbottomnavigation:undefined;
-  Medical:undefined;
+  Records:undefined;
 };
 
 export default RootStackParamList;

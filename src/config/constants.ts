@@ -9,6 +9,7 @@ export const IMAGES = {
   doctor_prescripton: require('../assests/images/doctor_prescription.jpg'),
   profile: require('../assests/images/profile.png'),
   doctor:require('../assests/images/doctor.png'),
+  record:require('../assests/images/Record.png'),
 };
 export const COLORS = {
   NATURAL_WHITE: '#FFFFFF',
