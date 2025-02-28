@@ -15,12 +15,16 @@ export default function ({
   rating,
   experience,
   profilePhoto,
+  timeVisible = false,
+  time,
 }: {
   name: string;
   speciality: string;
   rating: string;
   experience: string;
   profilePhoto: ImageSourcePropType;
+  timeVisible?: boolean;
+  time?: string[];
 }) {
   return (
     <>
@@ -39,9 +43,20 @@ export default function ({
                 textStyle={styles.rating}
               />
             </FlexBox>
-            <TouchableOpacity style={styles.button}>
-              <Title text="View Profile" textStyle={styles.buttonText} />
-            </TouchableOpacity>
+            {timeVisible ? (
+              <FlexBox alignItems="center" columngap={10}>
+                {time !== undefined &&
+                  time.map(item => (
+                    <TouchableOpacity style={styles.timecontainer}>
+                      <Title text={item} textStyle={styles.time} />
+                    </TouchableOpacity>
+                  ))}
+              </FlexBox>
+            ) : (
+              <TouchableOpacity style={styles.button}>
+                <Title text="View Profile" textStyle={styles.buttonText} />
+              </TouchableOpacity>
+            )}
           </FlexBox>
         </FlexBox>
       </FlexBox>
@@ -93,5 +108,15 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     marginLeft: 10,
     marginTop: 8,
+  },
+  time: {
+    color: '#2563eb',
+    fontSize: 10,
+    fontWeight: '400',
+  },
+  timecontainer: {
+    backgroundColor: '#eff6ff',
+    padding: 5,
+    borderRadius: 12,
   },
 });

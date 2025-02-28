@@ -1,8 +1,8 @@
 import React from 'react';
 import FlexBox from '../flexBox';
-import {StyleSheet, TouchableOpacity} from 'react-native';
+import {Image, StyleSheet, TouchableOpacity} from 'react-native';
 import Title from '../title';
-import {COLORS, SIZE} from '../../config/constants';
+import {COLORS, IMAGES, SIZE} from '../../config/constants';
 import Feather from 'react-native-vector-icons/Feather';
 export default function ({
   checkupType,
@@ -20,13 +20,13 @@ export default function ({
       <FlexBox style={styles.container}>
         <FlexBox flexDirection="column" rowgap={10}>
           <FlexBox alignItems="center" columngap={10}>
-            <TouchableOpacity style={styles.fileContainer}>
-              <Feather name="file-text" size={20} color={COLORS.PRIMARY_900} />
+            <TouchableOpacity>
+              <Image source={IMAGES.record} style={styles.record} />
             </TouchableOpacity>
             <FlexBox flexDirection="column">
               <Title text={checkupType} textStyle={styles.nametext} />
               {prescription && (
-                <Title text="Prescription" textStyle={styles.specialitytext} />
+                <Title text="Test Report" textStyle={styles.specialitytext} />
               )}
             </FlexBox>
           </FlexBox>
@@ -67,12 +67,8 @@ const styles = StyleSheet.create({
   download: {
     marginRight: 20,
   },
-  fileContainer: {
-    backgroundColor: '#dbeafe',
-    width: 38,
-    height: 38,
-    borderRadius: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
+  record: {
+    width: 40,
+    height: 40,
   },
 });

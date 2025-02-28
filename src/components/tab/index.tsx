@@ -15,7 +15,10 @@ export default function ({
   return (
     <>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-        <FlexBox alignItems="center" columngap={5}>
+        <FlexBox
+          alignItems="center"
+          style={{marginTop: 5, marginBottom: 10}}
+          columngap={5}>
           {tabData.map((item, index) => (
             <TouchableOpacity
               key={index}
