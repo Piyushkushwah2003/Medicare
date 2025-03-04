@@ -33,6 +33,8 @@ const styles = StyleSheet.create({
     padding: 15,
     flexDirection: 'column',
     rowGap: 10,
+    borderColor:COLORS.SUCCESS_200,
+    borderWidth:1
   },
   text: {
     fontSize: SIZE.SMALL,

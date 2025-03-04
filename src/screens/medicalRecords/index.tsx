@@ -32,6 +32,9 @@ export default function () {
             />
             <Appointment
               iconVisible={false}
+              containerStyle={{borderWidth:1,
+                borderColor:COLORS.SUCCESS_200
+              }}
               innerContainerStyle={{backgroundColor: COLORS.NATURAL_WHITE}}
               children={<Image source={IMAGES.record} style={styles.record} />}
               text="Test Records"

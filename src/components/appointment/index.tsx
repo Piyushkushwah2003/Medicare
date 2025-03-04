@@ -11,6 +11,7 @@ export default function ({
   children,
   textStyle,
   children2,
+  containerStyle,
 }: {
   innerContainerStyle?: ViewStyle;
   text?: string;
@@ -18,10 +19,11 @@ export default function ({
   children?: React.ReactNode;
   children2?: React.ReactNode;
   textStyle?: TextStyle;
+  containerStyle?:ViewStyle;
 }) {
   return (
     <>
-      <TouchableOpacity style={styles.container}>
+      <TouchableOpacity style={[styles.container,containerStyle]}>
         <FlexBox style={[styles.cal, innerContainerStyle]}>
           {iconVisible && (
             <Feather name="calendar" size={18} color={COLORS.PRIMARY_900} />
@@ -51,6 +53,8 @@ const styles = StyleSheet.create({
     width: '48%',
     flexDirection: 'column',
     rowGap: 10,
+    borderWidth:1,
+    borderColor:COLORS.PRIMARY_900
   },
   text: {
     fontSize: SIZE.SMALL,
