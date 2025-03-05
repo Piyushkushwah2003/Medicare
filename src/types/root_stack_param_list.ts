@@ -9,12 +9,15 @@ type RootStackParamList = {
   Doctoronbordingsecond: undefined;
   Doctoronbordingthird: undefined;
   Userdashboard: undefined;
-  Home:undefined;
-  Doctors:undefined;
-  Appointments:undefined;
-  Profile:undefined;
-  Patientbottomnavigation:undefined;
-  Records:undefined;
+  Home: undefined;
+  Doctors: undefined;
+  Appointments: undefined;
+  Profile: undefined;
+  Patientbottomnavigation: undefined;
+  Records: undefined;
+  Doctorbottomnavigation: undefined;
+  Doctordashboard:undefined;
+  Notification:undefined;
 };
 
 export default RootStackParamList;

@@ -23,7 +23,7 @@ export default function () {
           </FlexBox>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => navigate('Userselection')}>
+            onPress={() => navigate('Doctorbottomnavigation')}>
             <MaterialIcons
               name="arrow-forward"
               size={30}

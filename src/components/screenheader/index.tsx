@@ -10,22 +10,27 @@ export default function ({
   onpressback,
   headertextstyle,
   headerContainerStyle,
+  children,
 }: {
   headerText?: string;
   onpressback?: () => void;
   headertextstyle?: TextStyle;
   headerContainerStyle?: ViewStyle;
+  children?: React.ReactNode;
 }) {
   return (
     <>
       <FlexBox
         alignItems="center"
-        columngap={20}
+        justifyContent='between'
         style={[styles.container, headerContainerStyle]}>
-        <TouchableOpacity onPress={() => goBack()}>
-          <AntDesign name="arrowleft" color={COLORS.NEUTRAL_800} size={24} />
-        </TouchableOpacity>
-        <Title text={headerText} textStyle={[styles.text, headertextstyle]} />
+        <FlexBox alignItems="center" columngap={20}>
+          <TouchableOpacity onPress={() => goBack()}>
+            <AntDesign name="arrowleft" color={COLORS.NEUTRAL_800} size={24} />
+          </TouchableOpacity>
+          <Title text={headerText} textStyle={[styles.text, headertextstyle]} />
+        </FlexBox>
+        {children}
       </FlexBox>
     </>
   );
@@ -37,6 +42,6 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   container: {
-    marginBottom:20
+    marginBottom: 20,
   },
 });

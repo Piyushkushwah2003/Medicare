@@ -14,6 +14,9 @@ import doctoronbordingsecond from '../screens/doctoronbordingsecond';
 import doctoronbordingthird from '../screens/doctoronbordingthird';
 import userdashboard from '../screens/userdashboard';
 import patientbottomnavigation from './patientbottomnavigation';
+import doctorbottomnavigation from './doctorbottomnavigation';
+import doctordashboard from '../screens/doctordashboard';
+import notification from '../screens/notification';
 
 const StackComponent = createStackNavigator<RootStackParamList>();
 export default function () {
@@ -51,17 +54,29 @@ export default function () {
             name={'Doctoronbordingsecond'}
             component={doctoronbordingsecond}
           />
-             <StackComponent.Screen
+          <StackComponent.Screen
             name={'Doctoronbordingthird'}
             component={doctoronbordingthird}
           />
-              <StackComponent.Screen
+          <StackComponent.Screen
             name={'Userdashboard'}
             component={userdashboard}
           />
-              <StackComponent.Screen
+          <StackComponent.Screen
             name={'Patientbottomnavigation'}
             component={patientbottomnavigation}
+          />
+          <StackComponent.Screen
+            name={'Doctorbottomnavigation'}
+            component={doctorbottomnavigation}
+          />
+          <StackComponent.Screen
+            name={'Doctordashboard'}
+            component={doctordashboard}
+          />
+          <StackComponent.Screen
+            name={'Notification'}
+            component={notification}
           />
         </StackComponent.Navigator>
       </NavigationContainer>

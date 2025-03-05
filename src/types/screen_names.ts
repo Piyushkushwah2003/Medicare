@@ -14,4 +14,7 @@ export type screenName =
   | 'Appointments'
   | 'Profile'
   | 'Patientbottomnavigation'
-  | 'Records';
+  | 'Records'
+  | 'Doctorbottomnavigation'
+  | 'Doctordashboard'
+  | 'Notification';

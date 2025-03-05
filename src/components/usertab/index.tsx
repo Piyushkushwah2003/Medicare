@@ -4,6 +4,7 @@ import Title from '../title';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {COLORS, IMAGES, SIZE} from '../../config/constants';
 import {Image, StyleSheet, TouchableOpacity} from 'react-native';
+import {navigate} from '../../services/navigation_services';
 export default function () {
   return (
     <>
@@ -18,7 +19,9 @@ export default function () {
             <Title text="Test User" textStyle={styles.name} />
           </FlexBox>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.notification}>
+        <TouchableOpacity
+          style={styles.notification}
+          onPress={() => navigate('Notification')}>
           <Ionicons
             name="notifications-outline"
             size={26}
