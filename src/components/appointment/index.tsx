@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     rowGap: 10,
     borderWidth:1,
-    borderColor:COLORS.PRIMARY_900
+    borderColor:COLORS.PRIMARY_900,
   },
   text: {
     fontSize: SIZE.SMALL,

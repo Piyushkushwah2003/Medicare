@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.NATURAL_WHITE,
     borderRadius: 8,
     padding: 10,
+    elevation:2
   },
   nametext: {
     fontSize: SIZE.SMALL,

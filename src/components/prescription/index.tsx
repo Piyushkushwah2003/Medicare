@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     justifyContent: 'space-between',
     alignItems: 'center',
+    elevation:2
   },
   nametext: {
     fontSize: SIZE.SMALL,

@@ -89,6 +89,7 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: COLORS.NATURAL_WHITE,
     borderRadius: 5,
+    elevation:1
   },
   dot: {
     width: 4,
