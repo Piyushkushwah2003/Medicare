@@ -18,6 +18,7 @@ type RootStackParamList = {
   Doctorbottomnavigation: undefined;
   Doctordashboard:undefined;
   Notification:undefined;
+  Otp:undefined;
 };
 
 export default RootStackParamList;

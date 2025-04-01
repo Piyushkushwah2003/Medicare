@@ -17,4 +17,5 @@ export type screenName =
   | 'Records'
   | 'Doctorbottomnavigation'
   | 'Doctordashboard'
-  | 'Notification';
+  | 'Notification'
+  | 'Otp';

@@ -56,11 +56,7 @@ export default function () {
                 buttonText="Register"
                 buttonStyle={styles.button}
                 textStyle={styles.buttontext}
-                handlePress={() => {
-                  userselectedoption === 2
-                    ? navigate('Patientonbordingfirst')
-                    : navigate('Doctoronbordingfirst');
-                }}
+                handlePress={() => navigate('Otp')}
               />
             </FlexBox>
           </FlexBox>

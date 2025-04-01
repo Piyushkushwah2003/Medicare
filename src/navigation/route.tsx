@@ -17,6 +17,7 @@ import patientbottomnavigation from './patientbottomnavigation';
 import doctorbottomnavigation from './doctorbottomnavigation';
 import doctordashboard from '../screens/doctordashboard';
 import notification from '../screens/notification';
+import otp from '../screens/otp';
 
 const StackComponent = createStackNavigator<RootStackParamList>();
 export default function () {
@@ -78,6 +79,7 @@ export default function () {
             name={'Notification'}
             component={notification}
           />
+          <StackComponent.Screen name={'Otp'} component={otp} />
         </StackComponent.Navigator>
       </NavigationContainer>
     </>
